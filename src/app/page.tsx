@@ -1,26 +1,24 @@
 import { Experience } from "./components/experience/experience";
 import { Header } from "./components/header/header";
+import { EmailIcon } from "./components/Icons/email-icon";
+import { Info } from "./components/information/information";
+import { SocialBtnsProps } from "./components/social-btns/social-btns";
 import "./styles/home.scss"
 
 export default function Home() {
   return (
     <main className="container">
       <Header/>
-      <Experience/>  
-        <div className="infos">
-          <h3>Languages</h3>
-          <div className="languages-info">
-            <span>EN - Advanced</span>
-            <span>PT-BR - Native Speaker</span>
-          </div>
-          <h3>Education</h3>
-          <span>🎓 Digital Games - Fatec Carapicuiba</span>
-        </div>
+      <Experience/>
+      <Info/>  
         <div className="buttons">
           <div className="social">
-
+            <SocialBtnsProps/>
           </div>
-          <button>contact me!</button>
+          <a className="btn-primary" href="mailto:teste@gmail.com">
+            contact me!
+            <EmailIcon/>
+          </a>
         </div>
     </main>
   );
